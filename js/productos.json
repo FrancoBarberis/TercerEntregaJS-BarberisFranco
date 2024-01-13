@@ -1,0 +1,142 @@
+[
+    {
+        "id": "guitarra-01",
+        "titulo": "Gibson Les Paul",
+        "imagen": "./img/guitarras/GibsonLP.webp",
+        "categoria": {
+            "nombre": "Guitarras",
+            "id": "guitarras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "guitarra-02",
+        "titulo": "Gibson SG",
+        "imagen": "./img/guitarras/GibsonSG.webp",
+        "categoria": {
+            "nombre": "Guitarras",
+            "id": "guitarras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Guitarra-03",
+        "titulo": "Fender Telecaster",
+        "imagen": "./img/guitarras/FenderTelecaster.webp",
+        "categoria": {
+            "nombre": "Guitarras",
+            "id": "guitarras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Guitarra-04",
+        "titulo": "Fender Stratocaster",
+        "imagen": "./img/guitarras/FenderStratocaster.webp",
+        "categoria": {
+            "nombre": "Guitarras",
+            "id": "guitarras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Guitarra-05",
+        "titulo": "Gibson Explorer",
+        "imagen": "./img/guitarras/GibsonExplorer.webp",
+        "categoria": {
+            "nombre": "guitarras",
+            "id": "guitarras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-01",
+        "titulo": "Pedal Wah-Wah",
+        "imagen": "./img/pedales/Wah-Wah.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-02",
+        "titulo": "Pedal Boss Chorus",
+        "imagen": "./img/pedales/Chorus.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-03",
+        "titulo": "Pedal Boss Reverb",
+        "imagen": "./img/pedales/Reverb.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-04",
+        "titulo": "Pedal Boss Overdrive",
+        "imagen": "./img/pedales/Overdrive.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-05",
+        "titulo": "Pedal Boss Fuzz",
+        "imagen": "./img/pedales/Fuzz.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pedal-06",
+        "titulo": "Pedal Orange Phaser",
+        "imagen": "./img/pedales/Phaser.webp",
+        "categoria": {
+            "nombre": "Pedales",
+            "id": "pedales"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "amplificador-01",
+        "titulo": "Marshall 15w",
+        "imagen": "./img/amplificadores/marshall15w.webp",
+        "categoria": {
+            "nombre": "Amplificadores",
+            "id": "amplificadores"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "amplificador-02",
+        "titulo": "Boss Katana 50w",
+        "imagen": "./img/amplificadores/BossKatana50w.webp",
+        "categoria": {
+            "nombre": "Amplificadores",
+            "id": "amplificadores"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "amplificador-03",
+        "titulo": "Fender Champion 100w",
+        "imagen": "./img/amplificadores/FenderChampion100w.webp",
+        "categoria": {
+            "nombre": "Amplificadores",
+            "id": "amplificadores"
+        },
+        "precio": 1000
+    }
+]

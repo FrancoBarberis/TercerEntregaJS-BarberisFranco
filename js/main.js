@@ -7,7 +7,7 @@ fetch("./js/productos.json")
         cargarProductos(productos);
     })
 
-
+// LEVANTO LOS ELEMENTOS DEL HTML Y LOS ASOCIO A UNA VARIABLE
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");

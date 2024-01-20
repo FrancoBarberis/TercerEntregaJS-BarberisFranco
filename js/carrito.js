@@ -1,9 +1,7 @@
-
-
+//LEVANTO DESDE EL LOCAL STORAGE LA INFO DEL CARRITO Y LO CONVIERTO EN UN OBJETO
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
-// LEVANTO LOS ELEMENTOS DEL HTML PARA DARLES FUNCIONALIDAD CON JS
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
@@ -16,15 +14,24 @@ const botonComprar = document.querySelector("#carrito-acciones-comprar");
 
 
 function cargarProductosCarrito() {
+
+    //VERIFICO SI EL CARRITO ESTÁ VACÍO O NO
+    
     if (productosEnCarrito && productosEnCarrito.length > 0) {
+
+        //SI NO ESTÁ VACÍO, MUESTRA LOS PRODUCTOS QUE CONTIENE
 
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
         contenedorCarritoComprado.classList.add("disabled");
-    
+        
+        //LIMPIO EL CONTENIDO DEL CONTENEDOR ANTES DE HACER OTRA COSA
+
         contenedorCarritoProductos.innerHTML = "";
     
+        //CREO LOS ELEMENTOS HTML PARA CADA PRODUCTO
+
         productosEnCarrito.forEach(producto => {
     
             const div = document.createElement("div");
@@ -49,7 +56,9 @@ function cargarProductosCarrito() {
                 </div>
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
             `;
-    
+            
+            //LOS AGREGO EN EL CONTENEDOR QUE PREVIAMENTE LIMPIÉ
+
             contenedorCarritoProductos.append(div);
         })
     
@@ -57,6 +66,7 @@ function cargarProductosCarrito() {
     actualizarTotal();
 	
     } else {
+        //COMO EL CARRITO ESTÁ VACÍO, DEJO DE MOSTRAR LOS CONTENEDORES 
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");

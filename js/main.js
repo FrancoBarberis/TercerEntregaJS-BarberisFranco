@@ -1,4 +1,8 @@
+//DEFINO EL ARRAY DONDE VAN A IR GUARDADOS LOS DATOS QUE LEVANTO DINÁMICAMENTE PARA MODIFICAR EL DOM DE PRODUCTOS
+
 let productos = [];
+
+//LEVANTO LOS DATOS DE LOS PRODUCTOS DESDE EL ARCHIVO JSON, LOS DEJO CONVERTIDOS EN JSON NUEVAMENTE, LOS ALMACENO EN UNA VARIABLE Y LOS CARGO EN EL DOM
 
 fetch("./js/productos.json")
     .then(response => response.json())
@@ -82,6 +86,8 @@ if (productosEnCarritoLS) {
     productosEnCarrito = [];
 }
 
+
+//ALERTA QUE NOTIFICA QUE AGREGO UN PRODUCTO AL CARRITO
 function agregarAlCarrito(e) {
 
     Toastify({
@@ -104,19 +110,22 @@ function agregarAlCarrito(e) {
         onClick: function(){} 
       }).showToast();
 
+    //OBTENGO EL ID DEL BOTÓN QUE DESENCADENÓ EL EVENTO Y LO UTILIZO PARA BUSCAR EL PRODUCTO CORRESPONDIENTE EN EL ARRAY
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
+    //MIRO SI EL PRODUCTO YA ESTÁ EN EL CARRITO, DE SER ASÍ, AUMENTO LA CANTIDAD EN 1
     if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
-    } else {
+    }//EN CASO CONTRARIO, LO AGREGO AL CARRITO Y ESTABLEZCO LA CANTIDAD EN 1 
+    else {
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
     }
 
     actualizarNumerito();
-
+    //GUARDO LA INFO ACTUALIZADA DE FORMA LOCAL, COMO UN JSON
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 

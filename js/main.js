@@ -26,6 +26,7 @@ botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
 
 function cargarProductos(productosElegidos) {
 
+    //VACÍO EL CONTENEDOR DE PRODUCTOS ANTES DE CARGAR
     contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
@@ -41,6 +42,7 @@ function cargarProductos(productosElegidos) {
             </div>
         `;
 
+        //CARGO EL ELEMENTO ACTUAL EN EL CONTENEDOR
         contenedorProductos.append(div);
     })
 
